@@ -1,0 +1,76 @@
+﻿@model IEnumerable<TrackMe.Models.Moment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Feeling)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FeelStrength)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Being)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.With)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Doing)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Temp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weather)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Feeling)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FeelStrength)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Being)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.With)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Doing)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Temp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weather)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

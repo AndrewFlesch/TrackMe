@@ -1,0 +1,83 @@
+﻿@model TrackMe.Models.Moment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Moment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Feeling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Feeling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeelStrength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeelStrength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Being)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Being)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.With)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.With)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Doing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Temp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

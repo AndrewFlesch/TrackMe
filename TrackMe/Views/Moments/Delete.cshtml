@@ -1,0 +1,89 @@
+﻿@model TrackMe.Models.Moment
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Moment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Feeling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Feeling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeelStrength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeelStrength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Being)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Being)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.With)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.With)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Doing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Temp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

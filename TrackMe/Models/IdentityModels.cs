@@ -29,5 +29,7 @@ namespace TrackMe.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<TrackMe.Models.Moment> Moments { get; set; }
     }
 }
